@@ -1,13 +1,8 @@
-#!groovy
-
-pipeline {
-  agent none
-  stages {
-    stage('Docker Build') {
-      agent any
-      steps {
-        sh 'docker build -t test-image:latest .'
-      }
-    }
+job('Building Docker Files') {
+  scm {
+    git('https://github.com/nickkostov/project-repo-template.git')
+  }
+  steps {
+    shell('docker build test-image:latest .')
   }
 }
