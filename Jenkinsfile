@@ -16,8 +16,7 @@ pipeline {
         stage ('Testing Stage') {
 				// could be a tests
             steps {
-                    sh 'echo "Hello There Second stage'
-					sh 'ls -lah'
+                    sh 'ls -lah'
                 }
             }
 				// could be a release
