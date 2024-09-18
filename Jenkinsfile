@@ -29,10 +29,10 @@ pipeline {
       steps {
         parallel(
           "Taskone": {
-            sh 'Hi I run at same time as the other one'
+            sh 'echo "Hi I run at same time as the other one"'
           },
           "Tasktwo": {
-            sh 'Hi I run at same time as the other, kiss'
+            sh 'echo "Hi I run at same time as the other, kiss"'
           }
         )
       }
