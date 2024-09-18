@@ -18,13 +18,12 @@ pipeline {
 					sh 'ls -lah'
                 }
             }
-        }
-
 				// could be a release
         stage ('Deployment Stage') {
-            steps {
-                    sh 'echo "I am here"'
-
+            steps { 
+                sh 'echo "I am here"'
             }
         }
+        }
+
 }
