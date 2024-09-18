@@ -25,6 +25,11 @@ pipeline {
         sh 'echo "I am here"'
       }
     }
+    stage('Deployment Stage') {
+      steps {
+        sh 'docker build -t image:latest .'
+      }
+    }
     stage("Parallel") {
       steps {
         parallel(
