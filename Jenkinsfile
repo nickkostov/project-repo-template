@@ -25,7 +25,7 @@ pipeline {
         sh 'echo "I am here"'
       }
     }
-    stage('Deployment Stage') {
+    stage('Docker Build') {
       steps {
         sh 'docker build -t image:latest .'
       }
